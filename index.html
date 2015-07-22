@@ -8,7 +8,7 @@
     <p>Choose watchapp settings</p>
  
     <p>Invert watchapp:
-    <select id="Color_Select">
+    <select id="color">
       <option value="0">Off</option>
       <option value="1">On</option>
     </select>
@@ -22,7 +22,7 @@
 <script>
   //Setup to allow easy adding more options later
   function saveOptions() {
-    var colorSelect = document.getElementById("Color_Select");
+    var colorSelect = document.getElementById("color");
  
     var options = {
       "color": parseInt(colorSelect.options[colorSelect.selectedIndex].value)
@@ -34,7 +34,7 @@
   var submitButton = document.getElementById("Save");
   submitButton.addEventListener("click"), 
     function() {
-      console.log("Submit");
+      console.log("Save");
  
       var options = saveOptions();
       var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
