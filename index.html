@@ -9,8 +9,8 @@
  
     <p>Invert watchapp:
     <select id="Color_Select">
-      <option value="Off">Off</option>
-      <option value="ON">On</option>
+      <option value="0">Off</option>
+      <option value="1">On</option>
     </select>
     </p>
  
@@ -25,7 +25,7 @@
     var colorSelect = document.getElementById("Color_Select");
  
     var options = {
-      "color": colorSelect.options[colorSelect.selectedIndex].value
+      "color": parseInt(colorSelect.options[colorSelect.selectedIndex].value)
     }
      
     return options;
